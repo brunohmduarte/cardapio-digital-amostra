@@ -20,10 +20,10 @@
         <div class="w-full h-full flex flex-col justify-center items-center">
             <img src="./assets/hamb-1.png" alt="Hamburger 1"
                 class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
-            <h1 class="text-4x1 mt-3 mb-2 font-bold text-white">Duarte's Burguer</h1>
+            <h1 class="text-4x1 mt-3 mb-2 font-bold text-white text-4xl">Duarte's Burguer</h1>
             <span class="text-white font-light">O melhor hambuguer de Marília e Região</span>
             <div class="bg-green-600 px-4 py-2 my-4 rounded-lg" id="date-span">
-                <span class="text-white">Seg. à Sáb. das 18h às 23h</span>
+                <span  class="text-white">Seg. à Sáb. das 18h às 23h</span>
             </div>
         </div>
     </header>
@@ -162,16 +162,19 @@
         class="w-full h-full bg-black/50 fixed top-0 left-0 z-[99] items-center justify-center hidden"
     >
         <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
-            <h2 class="text-center text-2xl font-bold">Meu carrinho</h2>
-            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+            <h2 class="text-center text-2xl font-bold mb-4">Meu carrinho</h2>
 
-            <p class="font-bold"><span id="cart-total">R$ 0,00</span></p>
+            <div id="cart-items" class="flex justify-between mb-2 flex-col max-h-80 overflow-y-auto"></div>
+
+            <p class="font-bold text-right text-2xl">
+                <span id="cart-total">R$ 0,00</span>
+            </p>
 
             <p class="font-bold mt-4">Endereço de entrega:</p>
             <input 
                 type="text"
                 id="address"
-                class="w-full border-2 p-1 rounded my-1"
+                class="w-full border-2 p-1 rounded my-1 outline-none"
                 placeholder="Digite o seu endereço para entrega..."
             />
             <small class="text-red-500 font-light hidden" id="address-warning">
@@ -192,7 +195,7 @@
             class="flex items-center gap-2 text-white font-semibold"
             id="cart-btn"
         >
-            (<span id="cart-count">2</span>)
+            (<span id="cart-count">0</span>)
             Meu carrinho
             <i class="fa fa-cart-plus text-lg text-white"></i>
         </button>
