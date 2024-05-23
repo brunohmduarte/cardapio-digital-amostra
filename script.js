@@ -133,10 +133,23 @@ addressInput.addEventListener('input', function (event) {
 
 // Finalizar pedido
 checkoutBtn.addEventListener('click', function() {
-    // const isOpen = checkRestaurantStatus()
-    // if (!isOpen) {
-    //     return
-    // }
+    const isOpen = checkRestaurantStatus()
+    if (!isOpen) {
+        Toastify({
+            text: "Ops! O estabelecimento está fechado no momento.",
+            duration: 3000,
+            close: true,
+            gravity: "top", 
+            position: "right",
+            stopOnFocus: true,
+            style: {
+                background: "#ef4444",
+            },
+            onClick: function(){}
+        }).showToast();
+
+        return
+    }
 
     if (cart.length === 0) {
         return
